@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/some_id">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Meal Cost $"
+        android:id="@+id/MealCostText"
+        android:layout_marginTop="61dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/MealCostEdit"
+        android:layout_marginRight="39dp"
+        android:layout_alignBottom="@+id/MealCostText"
+        android:layout_toRightOf="@+id/MealCostText"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tax Percentage %"
+        android:id="@+id/TaxPerText"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/MealCostText"
+        android:layout_alignLeft="@+id/MealCostText"
+        android:layout_alignStart="@+id/MealCostText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/TaxPerEdit"
+        android:layout_alignBottom="@+id/TaxPerText"
+        android:layout_alignLeft="@+id/MealCostEdit"
+        android:layout_alignStart="@+id/MealCostEdit"
+        android:layout_alignRight="@+id/MealCostEdit"
+        android:layout_alignEnd="@+id/MealCostEdit"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/MealCostEdit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/CalcButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/TaxPerText"
+        android:layout_alignStart="@+id/TaxPerText"
+        android:layout_marginBottom="78dp"
+        android:layout_alignRight="@+id/TaxPerText"
+        android:layout_alignEnd="@+id/TaxPerText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tip Percentage %"
+        android:id="@+id/TipPerText"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/TaxPerText"
+        android:layout_alignLeft="@+id/TaxPerText"
+        android:layout_alignStart="@+id/TaxPerText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/TipPerEdit"
+        android:layout_alignBottom="@+id/TipPerText"
+        android:layout_alignLeft="@+id/TaxPerEdit"
+        android:layout_alignStart="@+id/TaxPerEdit"
+        android:layout_alignRight="@+id/TaxPerEdit"
+        android:layout_alignEnd="@+id/TaxPerEdit"
+        android:layout_below="@+id/TaxPerEdit"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Total Meal Cost $"
+        android:id="@+id/TotalCostText"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/TipPerText"
+        android:layout_alignLeft="@+id/TipPerText"
+        android:layout_alignStart="@+id/TipPerText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/TotalCostView"
+        android:layout_alignStart="@+id/TipPerEdit"
+        android:layout_alignEnd="@+id/TipPerEdit"
+        android:layout_above="@+id/CalcButton"
+        android:layout_marginBottom="54dp"
+        android:layout_below="@+id/TipPerEdit"
+        android:layout_marginTop="31dp" />
+
+</RelativeLayout>
